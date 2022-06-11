@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style>  
+    body {  
+        background-color: linen;  
+    }   
+    </style>
+
+
+<div class="container my-2 mx-0">
+
+<img src="static/contactus2.png"    width=1300px  height=550px alt="...">
+
+
+</div>
+
+
+
+<div class="container my-3">
+    <h2 "class=my-1  px-5 "> kindly  fill the mentioned details!!! </h2>
+    <form  method="post" action="/contact">
+{% csrf_token %}
+        <!-- Name input -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input  type="text" class="form-control" id="name" name="name" placeholder="Enter your Full Name" > </div><!--data-sb-validations="required" --> 
+        <!--  <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div
+        </div>-->
+    <!--email details-->
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input  type="email" class="form-control" id="email" name="email" placeholder="Enter your Email-Address" > </div>
+        <!-- phone number input -->
+        <div class="form-group">
+          <label for="phone">Mobile no.</label>
+          <input  type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your whatsapp No." > </div>
+    
+        <!-- Message input -->
+        <div class="form-group">
+          <label for="desc">Message</label>
+          <textarea class="form-control" id="desc"  rows="5"  name="desc" placeholder="write your message here!!!" ></textarea></div>
+    
+        <!-- Form submissions success message -->
+      <!--<div class="d-none" id="submitSuccessMessage">
+          <div class="text-center mb-3">Form submission successful!</div>
+        </div>-->
+    
+        <!-- Form submissions error message -->
+      <!--   <div class="d-none" id="submitErrorMessage">
+          <div class="d-none" id="submitErrorMessage">
+          <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>-->
+    
+        <!-- Form submit button -->
+        <div >
+          <button class="btn btn-primary btn-lg  my-2" type="submit">Submit</button>
+        </div>
+    
+      </form>
+    
+    </div>
+
+
+</div>
+
+
+
+
+
+{% endblock body %}
+{% block title %}  {% endblock title %}
